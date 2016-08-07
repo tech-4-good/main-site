@@ -1,0 +1,32 @@
+{
+	"name": "example-project",
+	"version": "1.0.0",
+	"description": "Example Project",
+	"author": "Reason Digital <hello@reasondigital.com> (http://www.reasondigital.com/)",
+	"private": true,
+	"devDependencies": {
+		"autoprefixer": "latest",
+		"babel-preset-es2015": "latest",
+		"gulp-babel": "latest",
+		"gulp-changed": "latest",
+		"gulp-concat": "latest",
+		"gulp-cssnano": "latest",
+		"gulp-dest": "latest",
+		"gulp-eslint": "latest",
+		"gulp-filter": "latest",
+		"gulp-imagemin": "latest",
+		"gulp-livereload": "latest",
+		"gulp-order": "latest",
+		"gulp-postcss": "latest",
+		"gulp-sass": "latest",
+		"gulp-sourcemaps": "latest",
+		"gulp-uglify": "latest",
+		"gulp-watch": "latest",
+		"gulp": "latest",
+		"postcss-pxtorem": "latest",
+		"postcss-reporter": "latest",
+		"postcss-scss": "latest",
+		"rimraf": "latest",
+		"stylelint": "latest"
+	}
+}

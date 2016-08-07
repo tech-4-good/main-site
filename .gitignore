@@ -1,3 +1,14 @@
 # Craft Storage (cache) [http://buildwithcraft.com/help/craft-storage-gitignore]
 /craft/storage/*
 !/craft/storage/logo/*
+
+# File ignores
+.DS_Store
+Thumbs.db
+composer.lock
+composer.phar
+npm-debug.log
+npm-debug.log*
+
+# Dir ignores
+node_modules

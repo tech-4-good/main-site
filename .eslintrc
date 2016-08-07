@@ -1,0 +1,28 @@
+    {
+	"extends": "eslint:recommended",
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jquery": true,
+		"node": true
+	},
+	"globals": {
+		"app": false,
+		"template": false,
+        "Modernizr": false
+	},
+	"rules": {
+		"eqeqeq": "error",
+		"indent": ["error", "tab"],
+		"no-console": "warn",
+		"no-eval": "error",
+		"quotes": ["error", "single"],
+		"semi": "error",
+		"strict": ["error", "global"],
+		"array-bracket-spacing": ["error", "never"],
+		"object-curly-spacing": ["error", "never"],
+		"space-in-parens": ["error", "never"],
+		"space-before-function-paren": ["error", { "anonymous": "never", "named": "never" }],
+		"space-before-blocks": "error"
+	}
+}
