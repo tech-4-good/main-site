@@ -1,3 +1,22 @@
-$colour--primary: #da5a47;
+// Colours
+$colour--prototype: #D9D9D9;
+$colour--prototype-2: #B1B1B1;
+$colour--prototype-3: #cec0c0;
 
 $colour--white: #fff;
+$colour--black: #000;
+$colour--primary: #da5a47;
+
+// Social Colours
+$colour--facebook: #3b5998;
+$colour--twitter: #55acee;
+$colour--linkedin: #0077b5;
+$colour--youtube: #bb0000;
+$colour--email: #6d767d;
+
+// Image Path
+$image-path: "../images/";
+
+// Bootstrap
+$enable-flex: true;
+$container-max-widths: ( sm: 576px, md: 720px, lg: 940px, xl: 1200px );
