@@ -76,7 +76,7 @@ gulp.task('css-compile', ['css-lint'], function() {
 			convertValues: false
 		}))
 		.pipe(postcss(processors))
-		.pipe(sourcemaps.write('public/assets/css'))
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('public/assets/css'))
 		.pipe(filter('**/*.css'))
 		.pipe(livereload());
@@ -112,13 +112,15 @@ gulp.task('js-compile', ['js-lint'], function() {
 			'template/**/*.js',
 			'app.js'
 		]))
-		.pipe(babel())
+		.pipe(babel({
+			presets: ['es2015']
+		}))
 		.pipe(concat('scripts.js'))
-		.pipe(gulp.dest('public/assets/js'))
-		// .pipe(uglify({ mangle: false }))
-		// .pipe(dest('public/assets/js/min', { ext: '.min.js' }))
+		.pipe(gulp.dest('public/assets/js/'))
+		.pipe(uglify({ mangle: false }))
+		.pipe(dest('min', { ext: '.min.js' }))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('.'))
+		.pipe(gulp.dest('public/assets/js'))
 		.pipe(livereload());
 });
 

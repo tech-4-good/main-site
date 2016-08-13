@@ -4,5 +4,4 @@
 'use strict';
 
 template.example = () => {
-	// Example function
 };

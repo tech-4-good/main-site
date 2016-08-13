@@ -9,8 +9,8 @@
  * Set up environment globals.
  */
 
-const app = {},
-      template = {};
+var app = {},
+    template = {};
 
 /**
  * Define jQuery in noConflict mode.
@@ -21,9 +21,13 @@ $ = jQuery.noConflict();
 
 'use strict';
 
-template.example = () => {
-  // Example function
-};
+template.example = function () {};
+/* Template: Example function
+   ========================================================================== */
+
+'use strict';
+
+template.example = function () {};
 /* Example Project Application
    ========================================================================== */
 
@@ -36,11 +40,3 @@ $(function () {
 	/* Template */
 	template.example();
 });
-/* Template: Example function
-   ========================================================================== */
-
-'use strict';
-
-template.example = () => {
-  // Example function
-};
