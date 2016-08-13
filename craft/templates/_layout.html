@@ -19,27 +19,34 @@
 </head>
 
 <body>
-	<div class="container">
-		<header class="site-header">
-			<h2 class="site-header_heading"><a href="{{ siteUrl }}">{{ siteName }}</a></h2>
+	<header class="site-header">
+		<div class="site-logo">
+			<img src="//placehold.it/300x150" />
+			<span class="site-logo_support">Curated by Reason Digital</span>
+		</div>
 
-			<nav>
-				<ul>
-					<li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
-				</ul>
-			</nav>
-		</header>
+		<div class="header-hero" style="background-image: url(//placehold.it/1920x600);">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-8 offset-sm-2">
+						<div class="header-hero_main">What is techforgood and why is it so awesome?</div>
+						<a href="#content-more" class="btn btn--lg">Learn more</a>
+					</div>
+				</div>
+			</div>
 
-		<main class="site-content" role="main">
-			{% block content %}
-				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-			{% endblock %}
-		</main>
+		</div>
+	</header>
 
-		<footer class="site-footer">
-			Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved  •  Built with <a href="http://craftcms.com">Craft</a>
-		</footer>
-	</div>
+	<main class="site-content" role="main">
+		{% block content %}{% endblock %}
+	</main>
+
+	<footer class="site-footer container-fluid">
+		<div class="row">
+			<div class="col-sm-6">Copyright {{ now.year }}.</div>
+			<div class="col-sm-6">Curated by <a href="http://reason.digital" title="Visit Reason Digital" rel="author"></a>Reason Digital</div>
+		</div>
+	</footer>
 </body>
 </html>
