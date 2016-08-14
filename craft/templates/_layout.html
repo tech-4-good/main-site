@@ -21,16 +21,20 @@
 <body>
 	<header class="site-header">
 		<div class="site-logo">
-			<img src="//placehold.it/300x150" />
-			<span class="site-logo_support">Curated by Reason Digital</span>
+			<div class="container-fluid">
+				<div class="site-logo_box">
+					<img src="//placehold.it/300x150" />
+					<span class="site-logo_support">Curated by Reason Digital</span>
+				</div>
+			</div>
 		</div>
 
 		<div class="header-hero" style="background-image: url(//placehold.it/1920x600);">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-8 offset-sm-2">
+					<div class="col-sm-8 offset-sm-2 aligncenter">
 						<div class="header-hero_main">What is techforgood and why is it so awesome?</div>
-						<a href="#content-more" class="btn btn--lg">Learn more</a>
+						<a href="#content-more" class="btn btn--lg btn--block btn--elipsis">Learn more</a>
 					</div>
 				</div>
 			</div>
@@ -44,8 +48,24 @@
 
 	<footer class="site-footer container-fluid">
 		<div class="row">
+			<div class="col-sm-8 offset-sm-2 mailing-list aligncenter">
+				<div class="h3">Keep up to date with what we're doing next, by signing up to our mailing list</div>
+				<form class="mailing-list_form" action="index.html" method="post">
+
+					<label for="mailing_email" class="screen-reader-text">Email Address</label>
+					<input type="email" name="mailing_email" id="mailing_email" placeholder="Email address">
+
+					<label for="mailing_name" class="screen-reader-text">Your Name</label>
+					<input type="text" name="mailing_name" id="mailing_name" placeholder="Name">
+
+					<input type="submit" class="btn" value="Subscribe">
+
+				</form>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-sm-6">Copyright {{ now.year }}.</div>
-			<div class="col-sm-6">Curated by <a href="http://reason.digital" title="Visit Reason Digital" rel="author"></a>Reason Digital</div>
+			<div class="col-sm-6 alignright">Curated by <a href="http://reason.digital" title="Visit Reason Digital" rel="author"></a>Reason Digital</div>
 		</div>
 	</footer>
 </body>
