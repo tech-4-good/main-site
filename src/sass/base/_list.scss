@@ -1,0 +1,15 @@
+.list-unstyled {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.list-inline {
+	li {
+		display: inline-block;
+
+		+ li {
+			padding-left: 10px;
+		}// li + li
+	}
+}

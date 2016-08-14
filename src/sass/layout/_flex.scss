@@ -1,0 +1,28 @@
+.row--flex,
+.row--flex > [class*="col-"] {
+	display: flex;
+}
+
+.row--flex-sm,
+.row--flex-sm > [class*="col-sm-"] {
+	@include media-breakpoint-up(sm) {
+		display: flex;
+	}
+}
+
+.row--flex-wrap {
+	flex-flow: row wrap;
+	align-content: flex-start;
+	flex: 0;
+}
+
+.container--flex > [class*="col-"],
+.row--flex > [class*="col-"] {
+	margin: -.3px;
+	/* hack adjust for wrapping */
+}
+
+.container--flex > [class*="col-"] > div,
+.row--flex > [class*="col-"] > div {
+	width: 100%;
+}

@@ -1,20 +1,76 @@
+html {
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
 body {
-	margin: 50px;
-	font-family: sans-serif;
-	background: $colour--white;
+	color: $colour--black;
+	font-family: $font--normal;
+	font-size: 16px;
+	line-height: 1.2;
+	min-width: 320px;
+	margin: 0;
+	@include textwrap;
+	// properties for template.media_query() function
+	// which will return either xs, sm, md, lg or xl when called
+	&:before {
+		content: "xs";
+		display: none;
+		position: fixed;
+		@include media-breakpoint-up(sm) {
+			content: "sm";
+		}
+		@include media-breakpoint-up(md) {
+			content: "md";
+		}
+		@include media-breakpoint-up(lg) {
+			content: "lg";
+		}
+		@include media-breakpoint-up(xl) {
+			content: "xl";
+		}
+	}
 }
 
 a {
 	text-decoration: none;
-	color: $colour--white;
+	color: $colour--facebook;
 
 	&:hover {
 		text-decoration: underline;
 	}
 }
 
-.container {
-	margin: 0 auto;
-	width: 700px;
-	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+img {
+	max-width: 100%;
+	height: auto;
+	border-style: none;
+}
+
+section {
+	margin-top: 30px;
+}
+
+.background-section {
+	background: {
+		size: cover;
+		position: center;
+		repeat: no-repeat;
+	}
+}
+
+.container-fluid {
+	max-width: map_get( $container-max-widths, xl );
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+.alignleft {
+	text-align: left;
+}
+
+.alignright {
+	text-align: right;
 }
